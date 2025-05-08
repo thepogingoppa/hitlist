@@ -1,5 +1,27 @@
 {% extends 'hitlist/base.html' %}
 
 {% block header %}
-    <h1>Welcome to your Hit-list</h1>
+    <h1>Welcome to your <label>Hit-list</label></h1>
 {% endblock header %}
+
+{% block table_header %}
+
+{% endblock table_header%}
+
+{% block data_values %}
+    <div class='container'>
+        <div class='hitlist-label'>ID</div>
+        <div class='hitlist-label'>FIRST NAME</div>
+        <div class='hitlist-label'>LAST NAME</div>
+        <div class='hitlist-label'>STATUS</div>
+        <div class='hitlist-label'>DATE ADDED</div>
+
+        {% for Note in Notes %}
+        <div class='data'> {{ Note.pk }} </div>
+        <div class='data'> {{ Note.first_name }} </div>
+        <div class='data'> {{ Note.last_name }} </div>
+        <div class='data'> {{ Note.status }} </div>
+        <div class='data'> {{ Note.date_added }}</div>
+        {% endfor %}
+    </div>
+{% endblock data_values %}
