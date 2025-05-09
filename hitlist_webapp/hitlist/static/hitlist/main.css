@@ -1,30 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Delicious+Handrawn&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Delicious+Handrawn&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
 
 :root {
-    --background-color : #1d1d1d !important;
-    --text-color : #ffffff !important;
+    --background-color : #1d1d1d;
+    --text-color : #ffffff ;
+    --margins: 5%;
 }
 
 body  {
     background-color: var(--background-color);
     color: var(--text-color);
+    height: 100%;
+
 }
 
-h1 {
-    font-family: 'Cal Sans', 'Arial';
+nav {
+    display: flex;
+    padding-left: var(--margins);
+    padding-right: var(--margins);  
+
+    height: 5em;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.labels {
     text-transform: uppercase;
-    padding: 2.5%;
-    text-align: center;
+}
+.navbar-items > div:hover {
+    color: red; 
 }
 
-label {
-    font-family: 'Delicious Handrawn', 'Arial Bold';
-    text-transform: bold;
-    color: #9a0202;
+.navbar-items > div {
+    display: flex;
+    justify-content: center;
+    align-items: center ;   
 }
 
+.home {
+    font-family: 'Delicious Handrawn', cursive, 'Courier New', Courier, monospace;
+    font-size: 2em;
+    /* flex-basis: 10em; */
+}
 
+/* INDEX */
 .container {
     display: grid;
     grid-template-columns:  5% repeat(4, auto);
@@ -35,6 +67,6 @@ label {
     padding: 10px;
 }
 
-.container > .data {
+.container > .content {
     padding: 10px;
 }
