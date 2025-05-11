@@ -1,0 +1,20 @@
+{% extends 'hitlist/base.html'%}
+
+{% block content %}
+    <div class='content-section'>
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class='form-group'>
+                <legend> Join Now </legend>
+                {{ form.as_p }}
+            </fieldset>
+
+            <div class='form group'>
+                <button type=submit>Sign Up</button>
+            </div>
+            <small clas='text-muted'>
+                Already have an account? <a class='ml-2' href="#">Sign In</a>
+            </small>
+        </form>
+    </div>
+{% endblock content %}

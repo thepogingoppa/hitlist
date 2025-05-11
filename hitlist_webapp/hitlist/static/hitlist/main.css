@@ -9,7 +9,6 @@
 
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
-
 :root {
     --background-color : #1d1d1d;
     --text-color : #ffffff ;
@@ -40,6 +39,7 @@ nav {
 .labels {
     text-transform: uppercase;
 }
+
 .navbar-items > div:hover {
     color: red; 
 }
@@ -69,4 +69,12 @@ nav {
 
 .container > .content {
     padding: 10px;
+}
+
+/* Sign Up */
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
