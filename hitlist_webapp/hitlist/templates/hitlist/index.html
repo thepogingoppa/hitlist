@@ -1,19 +1,18 @@
 {% extends 'hitlist/base.html' %}
-
 {% block content %}
-    <div class='container'>
-        <div class='hitlist-label'>ID</div>
-        <div class='hitlist-label'>FIRST NAME</div>
-        <div class='hitlist-label'>LAST NAME</div>
-        <div class='hitlist-label'>STATUS</div>
-        <div class='hitlist-label'>DATE ADDED</div>
-
-        {% for Note in Notes %}
-        <div class='data'> {{ Note.pk }} </div>
-        <div class='data'> {{ Note.first_name }} </div>
-        <div class='data'> {{ Note.last_name }} </div>
-        <div class='data'> {{ Note.status }} </div>
-        <div class='data'> {{ Note.date_added }}</div>
-        {% endfor %}
+    <h1>Welcome to the Hitlist</h1>
+    <p>
+        Tired of forgetting the names of people who really deserve a spot on your personal blacklist? Enter The Hitlist—a darkly an app for keeping tabs on the people who’ve wronged you, annoyed you, or just chewed too loudly at lunch. 
+        No actual harm encouraged—just the sweet satisfaction of organization and a little emotional catharsis. Log their names, the date of which you added them and their alive status. 
+        Maybe even forgive… eventually. It’s petty. It’s pettily perfect. It’s The Hitlist. Because revenge is a dish best served… documented.
+    </p>
+    
+    <div class='btn'>
+        <a href={% url 'hitlist-login'%}>I have an Account</a>
     </div>
+
+    <div class='btn'>
+        <a href={% url 'hitlist-register' %}>I don't have an accountx</a>
+    </div>
+
 {% endblock content %}

@@ -15,7 +15,13 @@
   <body>
     <nav>
       <div class='navbar-items'>
-        <div class='home'>The Hitlist</div>
+        <div class='home'>
+          {% if user.is_authenticated %}
+            <a class="labels" href={% url 'hitlist-home' %}>Home</a>
+          {% else %}
+            <a class='labels' href={% url 'hitlist-landing' %}>Home</a>
+          {% endif %}
+        </div>
         {% if user.is_authenticated %}
           <div class='labels'>
             <form action={% url 'hitlist-logout' %} method='POST'>

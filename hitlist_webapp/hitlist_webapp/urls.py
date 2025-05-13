@@ -24,5 +24,6 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='hitlist-login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='hitlist-logout'),
     path('register/', user_views.register, name='hitlist-register'),
-    path('', include('hitlist.urls')),
+    path('home/', include('hitlist.urls')),
+    path('', include('hitlist.urls'))
 ]

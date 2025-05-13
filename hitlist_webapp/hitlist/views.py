@@ -6,4 +6,7 @@ def home(request):
     context = {
         'Notes': Note.objects.all()
     }
-    return render(request, 'hitlist/index.html', context)
+    return render(request, 'hitlist/home.html', context)
+
+def landing(request):
+    return render(request, 'hitlist/index.html')

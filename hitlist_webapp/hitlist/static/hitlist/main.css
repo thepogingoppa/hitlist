@@ -21,7 +21,15 @@ a {
 }
 
 a:hover {
-    color: white;
+    color: var(--text-color);
+}
+
+.logo  {
+    color:var(--text-color);
+}
+
+.logo:hover {
+    color: red;
 }
 
 body  {
@@ -53,12 +61,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center ;   
-}
-
-.home {
-    font-family: 'Delicious Handrawn', cursive, 'Courier New', Courier, monospace;
-    font-size: 2em;
-    /* flex-basis: 10em; */
 }
 
 /* INDEX */

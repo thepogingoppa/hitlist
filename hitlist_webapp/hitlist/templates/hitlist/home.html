@@ -1,0 +1,19 @@
+{% extends 'hitlist/base.html' %}
+
+{% block content %}
+    <div class='container'>
+        <div class='hitlist-label'>ID</div>
+        <div class='hitlist-label'>FIRST NAME</div>
+        <div class='hitlist-label'>LAST NAME</div>
+        <div class='hitlist-label'>STATUS</div>
+        <div class='hitlist-label'>DATE ADDED</div>
+
+        {% for Note in Notes %}
+        <div class='data'> {{ Note.pk }} </div>
+        <div class='data'> {{ Note.first_name }} </div>
+        <div class='data'> {{ Note.last_name }} </div>
+        <div class='data'> {{ Note.status }} </div>
+        <div class='data'> {{ Note.date_added }}</div>
+        {% endfor %}
+    </div>
+{% endblock content %}
