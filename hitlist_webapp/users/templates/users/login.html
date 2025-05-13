@@ -1,4 +1,4 @@
-{% extends 'hitlist/base.html'%}
+{% extends "hitlist/base.html" %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -6,15 +6,15 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class='form-group'>
-                <legend> Join Now </legend>
+                <legend> Log In</legend>
                 {{ form | crispy }}
             </fieldset>
 
             <div class='form group'>
-                <button type=submit>Sign Up</button>
+                <button type=submit>Log In</button>
             </div>
             <small class='text-muted'>
-                Already have an account? <a class='ml-2' href={% url 'hitlist-login' %}>Sign In</a>
+                Don't have an account? <a class='ml-2' href={% url 'hitlist-register' %}>Sign Up</a>
             </small>
         </form>
     </div>

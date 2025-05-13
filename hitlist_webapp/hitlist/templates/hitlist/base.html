@@ -16,8 +16,22 @@
     <nav>
       <div class='navbar-items'>
         <div class='home'>The Hitlist</div>
-        <div class='labels'>Log In</div>
-        <div class='labels'>Sign Up</div>
+        {% if user.is_authenticated %}
+          <div class='labels'>
+            <form action={% url 'hitlist-logout' %} method='POST'>
+              {% csrf_token %}
+              <button type=submit>Log Out</button>
+            </form>
+          </div>
+        {% else %}
+          <div class='labels'>
+            <a href={% url 'hitlist-login' %}> Log In </a>
+          </div>
+          <div class='labels'>
+            <a href={% url 'hitlist-register' %}> Sign Up </a>
+          </div>
+        {% endif %}
+
       </div>
     </nav>
 

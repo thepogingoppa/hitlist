@@ -9,10 +9,19 @@
 
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
+
 :root {
     --background-color : #1d1d1d;
     --text-color : #ffffff ;
     --margins: 5%;
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    color: white;
 }
 
 body  {
@@ -38,10 +47,6 @@ nav {
 
 .labels {
     text-transform: uppercase;
-}
-
-.navbar-items > div:hover {
-    color: red; 
 }
 
 .navbar-items > div {
