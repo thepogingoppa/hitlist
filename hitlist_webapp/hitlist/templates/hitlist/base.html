@@ -28,6 +28,7 @@
               {% csrf_token %}
               <button type=submit>Log Out</button>
             </form>
+            <a class='labels' href={% url 'hitlist-profile' %}>Profile </a>
           </div>
         {% else %}
           <div class='labels'>
