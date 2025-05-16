@@ -1,18 +1,18 @@
 {% extends 'hitlist/base.html' %}
-{% block content %}
-    <h1>Welcome to the Hitlist</h1>
-    <p>
-        Tired of forgetting the names of people who really deserve a spot on your personal blacklist? Enter The Hitlist—a darkly an app for keeping tabs on the people who’ve wronged you, annoyed you, or just chewed too loudly at lunch. 
-        No actual harm encouraged—just the sweet satisfaction of organization and a little emotional catharsis. Log their names, the date of which you added them and their alive status. 
-        Maybe even forgive… eventually. It’s petty. It’s pettily perfect. It’s The Hitlist. Because revenge is a dish best served… documented.
-    </p>
-    
-    <div class='btn'>
-        <a href={% url 'hitlist-login'%}>I have an Account</a>
-    </div>
 
-    <div class='btn'>
-        <a href={% url 'hitlist-register' %}>I don't have an account</a>
-    </div>
+{% block content %}
+    <section class="h-[100vh] flex-column ">
+        <h1 class='text-5xl pb-5 text-white font-bold text-transform: uppercase'>
+            Welcome to the 
+            <span class="text-red-500">Hitlist</span>
+        </h1>
+        <p class="pb-5 w-[50%]">
+            Tired of forgetting the names of people who really deserve a spot on your personal blacklist? Enter The Hitlist—a darkly an app for keeping tabs on the people who’ve wronged you, annoyed you, or just chewed too loudly at lunch. 
+            No actual harm encouraged—just the sweet satisfaction of organization and a little emotional catharsis. Log their names, the date of which you added them and their alive status. 
+            Maybe even forgive… eventually. It’s petty. It’s pettily perfect. It’s The Hitlist. Because revenge is a dish best served… documented.
+        </p>
+        <a class="p-5 bg-red-500 rounded-lg" href={% url 'hitlist-login'%}>I have an Account</a>
+        <a class="p-5 bg-red-500 rounded-lg" href={% url 'hitlist-register' %}>I don't have an account</a>
+    </section>
 
 {% endblock content %}

@@ -29,7 +29,8 @@ urlpatterns = [
     path('register/', user_views.register, name='hitlist-register'),
     path('home/', include('hitlist.urls')),
     path('profile-page/', user_views.profile_view, name='hitlist-profile'),
-    path('', include('hitlist.urls'))
+    path('', include('hitlist.urls')),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
 
 if settings.DEBUG:
