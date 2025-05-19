@@ -3,19 +3,6 @@
 
 {% block content %}
     <div class='content-section'>
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class='form-group'>
-                <legend> Join Now </legend>
-                {{ form | crispy }}
-            </fieldset>
-
-            <div class='form group'>
-                <button type=submit>Sign Up</button>
-            </div>
-            <small class='text-muted'>
-                Already have an account? <a class='ml-2' href={% url 'hitlist-login' %}>Sign In</a>
-            </small>
-        </form>
+        
     </div>
 {% endblock content %}

@@ -8,11 +8,8 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-red-600: oklch(57.7% 0.245 27.325);
     --color-gray-50: oklch(98.5% 0.002 247.839);
-    --color-gray-900: oklch(21% 0.034 264.665);
     --color-neutral-900: oklch(20.5% 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -21,12 +18,7 @@
     --font-weight-bold: 700;
     --tracking-normal: 0em;
     --leading-normal: 1.5;
-    --radius-xs: 0.125rem;
-    --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
-    --radius-2xl: 1rem;
-    --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -185,15 +177,6 @@
   .col-span-full {
     grid-column: 1 / -1;
   }
-  .col-start-1 {
-    grid-column-start: 1;
-  }
-  .col-end-3 {
-    grid-column-end: 3;
-  }
-  .row-auto {
-    grid-row: auto;
-  }
   .container {
     width: 100%;
   }
@@ -222,23 +205,14 @@
       max-width: 96rem;
     }
   }
-  .mx-5 {
-    margin-inline: calc(var(--spacing) * 5);
-  }
   .mx-auto {
     margin-inline: auto;
-  }
-  .my-5 {
-    margin-block: calc(var(--spacing) * 5);
   }
   .mr-25 {
     margin-right: calc(var(--spacing) * 25);
   }
   .mr-auto {
     margin-right: auto;
-  }
-  .mb-5 {
-    margin-bottom: calc(var(--spacing) * 5);
   }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
@@ -252,53 +226,14 @@
   .flex {
     display: flex;
   }
-  .h-\[90vh\] {
-    height: 90vh;
-  }
   .h-\[100vh\] {
     height: 100vh;
-  }
-  .h-\[vh\] {
-    height: vh;
-  }
-  .h-max {
-    height: max-content;
   }
   .h-screen {
     height: 100vh;
   }
-  .w-5 {
-    width: calc(var(--spacing) * 5);
-  }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
-  .w-25 {
-    width: calc(var(--spacing) * 25);
-  }
-  .w-28 {
-    width: calc(var(--spacing) * 28);
-  }
-  .w-50 {
-    width: calc(var(--spacing) * 50);
-  }
-  .w-70 {
-    width: calc(var(--spacing) * 70);
-  }
-  .w-90 {
-    width: calc(var(--spacing) * 90);
-  }
   .w-\[50\%\] {
     width: 50%;
-  }
-  .w-\[70\%\] {
-    width: 70%;
-  }
-  .w-\[70vh\] {
-    width: 70vh;
-  }
-  .w-\[90vh\] {
-    width: 90vh;
   }
   .grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -306,82 +241,26 @@
   .items-center {
     align-items: center;
   }
-  .justify-around {
-    justify-content: space-around;
-  }
-  .justify-between {
-    justify-content: space-between;
-  }
   .justify-center {
     justify-content: center;
   }
   .justify-end {
     justify-content: flex-end;
   }
-  .self-start {
-    align-self: flex-start;
-  }
-  .justify-self-start {
-    justify-self: flex-start;
-  }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
-  .rounded-4xl {
-    border-radius: var(--radius-4xl);
-  }
-  .rounded-\[30\%\] {
-    border-radius: 30%;
-  }
-  .rounded-\[50\%\] {
-    border-radius: 50%;
-  }
   .rounded-lg {
     border-radius: var(--radius-lg);
-  }
-  .rounded-md {
-    border-radius: var(--radius-md);
-  }
-  .rounded-xl {
-    border-radius: var(--radius-xl);
-  }
-  .rounded-xs {
-    border-radius: var(--radius-xs);
-  }
-  .rounded-l {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .bg-\[1D1616\] {
-    background-color: 1D1616;
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
-  .bg-gray-900 {
-    background-color: var(--color-gray-900);
-  }
   .bg-neutral-900 {
     background-color: var(--color-neutral-900);
-  }
-  .bg-red-400 {
-    background-color: var(--color-red-400);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
-  }
-  .p-7 {
-    padding: calc(var(--spacing) * 7);
-  }
-  .py-5 {
-    padding-block: calc(var(--spacing) * 5);
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
@@ -408,9 +287,6 @@
   .text-red-500 {
     color: var(--color-red-500);
   }
-  .text-red-600 {
-    color: var(--color-red-600);
-  }
   .text-white {
     color: var(--color-white);
   }
@@ -428,11 +304,6 @@
   .\[\&_div\]\:p-5 div {
     padding: calc(var(--spacing) * 5);
   }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-leading {
   syntax: "*";
@@ -458,7 +329,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;

@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'hitlist.apps.HitlistConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
-    'crispy_bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'theme',
-    'django_browser_reload'
+    'django_browser_reload',
+    'crispy_tailwind'
 ]
 
 MIDDLEWARE = [
@@ -125,8 +125,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
+CRISPY_TEMPLATE_PACK = 'tailwind'
 
 
 # Default primary key field type
