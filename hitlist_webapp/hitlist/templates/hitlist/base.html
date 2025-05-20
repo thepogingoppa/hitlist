@@ -13,7 +13,7 @@
   </head>
   <body class="grid-cols-12 bg-neutral-900 ml-25 mr-25" >
     {% comment %} <-- START OF NAVIGATION BAR --> {% endcomment %}
-    <div class="col-span-full flex justify-end text-shadow-white text-transform: uppercase [&_div]:p-5 pb-5" >
+    <div class="col-span-full flex justify-end text-shadow-white text-transform: uppercase [&_div]:p-4 pt-5 pb-5" >
           <div class="mr-auto">
             {% if user.is_authenticated %}
               <a href={% url 'hitlist-home' %}>Home</a>
@@ -22,20 +22,20 @@
             {% endif %}
           </div>    
           {% if user.is_authenticated %}
-            <div>
+            <div class="bg-green-700 rounded-lg mr-[2rem]">
               <form action={% url 'hitlist-logout' %} method='POST'>
                 {% csrf_token %}
-                <button type=submit class=" text-transform: uppercase ">Log Out</button>
+                <button type=submit class="">Log Out</button>
               </form>
             </div>
-            <div class="">
+            <div class="bg-green-700 rounded-lg">
               <a href={% url 'hitlist-profile' %}>Profile </a>
             </div>
           {% else %}
-            <div class="">
+            <div class="bg-green-700 rounded-lg mr-[2rem]">
               <a href={% url 'hitlist-login' %}> Log In </a>
             </div>
-            <div class="">
+            <div class="bg-green-700 rounded-lg">
               <a href={% url 'hitlist-register' %}> Sign Up </a>
             </div>
           {% endif %}
@@ -43,7 +43,7 @@
     {% comment %} <-- END OF NAVIGATION BAR --> {% endcomment %}
     {% if messages %}
       {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">
+        <div>
           {{ message }}
         </div>
       {% endfor %}

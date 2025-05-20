@@ -9,16 +9,23 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-green-700: oklch(52.7% 0.154 150.069);
     --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-neutral-900: oklch(20.5% 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
     --font-weight-bold: 700;
     --tracking-normal: 0em;
     --leading-normal: 1.5;
+    --leading-loose: 2;
     --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -208,8 +215,17 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-\[2rem\] {
+    margin-block: 2rem;
+  }
   .mr-25 {
     margin-right: calc(var(--spacing) * 25);
+  }
+  .mr-\[0\.75rem\] {
+    margin-right: 0.75rem;
+  }
+  .mr-\[2rem\] {
+    margin-right: 2rem;
   }
   .mr-auto {
     margin-right: auto;
@@ -220,14 +236,20 @@
   .ml-25 {
     margin-left: calc(var(--spacing) * 25);
   }
+  .ml-\[0\.75rem\] {
+    margin-left: 0.75rem;
+  }
   .block {
     display: block;
   }
   .flex {
     display: flex;
   }
-  .h-\[100vh\] {
-    height: 100vh;
+  .h-\[80vh\] {
+    height: 80vh;
+  }
+  .h-\[90vh\] {
+    height: 90vh;
   }
   .h-screen {
     height: 100vh;
@@ -235,11 +257,26 @@
   .w-\[50\%\] {
     width: 50%;
   }
+  .w-\[75\%\] {
+    width: 75%;
+  }
+  .w-\[100\%\] {
+    width: 100%;
+  }
+  .w-auto {
+    width: auto;
+  }
   .grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .items-center {
     align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
   }
   .justify-center {
     justify-content: center;
@@ -250,8 +287,22 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
+  }
+  .bg-gray-400\/20 {
+    background-color: color-mix(in srgb, oklch(70.7% 0.022 261.325) 20%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-gray-400\/20 {
+      background-color: color-mix(in oklab, var(--color-gray-400) 20%, transparent);
+    }
+  }
+  .bg-green-700 {
+    background-color: var(--color-green-700);
   }
   .bg-neutral-900 {
     background-color: var(--color-neutral-900);
@@ -259,11 +310,29 @@
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .py-\[1rem\] {
+    padding-block: 1rem;
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-\[1\.5rem\] {
+    padding-top: 1.5rem;
+  }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
   }
   .font-serif {
     font-family: var(--font-serif);
@@ -271,6 +340,14 @@
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-8xl {
+    font-size: var(--text-8xl);
+    line-height: var(--tw-leading, var(--text-8xl--line-height));
+  }
+  .text-lg\/loose {
+    font-size: var(--text-lg);
+    line-height: var(--leading-loose);
   }
   .leading-normal {
     --tw-leading: var(--leading-normal);
@@ -290,6 +367,14 @@
   .text-white {
     color: var(--color-white);
   }
+  .text-white\/70 {
+    color: color-mix(in srgb, #fff 70%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-white\/70 {
+      color: color-mix(in oklab, var(--color-white) 70%, transparent);
+    }
+  }
   .uppercase {
     text-transform: uppercase;
   }
@@ -301,8 +386,8 @@
       --tw-text-shadow-color: color-mix(in oklab, var(--color-white) var(--tw-text-shadow-alpha), transparent);
     }
   }
-  .\[\&_div\]\:p-5 div {
-    padding: calc(var(--spacing) * 5);
+  .\[\&_div\]\:p-4 div {
+    padding: calc(var(--spacing) * 4);
   }
 }
 @property --tw-leading {
