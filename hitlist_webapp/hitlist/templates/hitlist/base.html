@@ -5,10 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Hitlist</title>
-    <link rel="stylesheet" href="{% static 'hitlist/styles/styles.css'%}" />
+    <link rel="stylesheet" href=" {% static 'hitlist/styles/styles.css'%} " />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <nav>
+      <img src="#" alt="logo" />
+      <div>Log In</div>
+      <div>Sign Up</div>
+    </nav>
+
+    {% block content %} 
+    {% endblock content %}
+
+    <footer>
+      Copyright &copy; {% now "Y" %} Jozua Patalan
+    </footer>
 
     <script src="{% static 'hitlist/scripts/script.js'%}"></script>
   </body>
