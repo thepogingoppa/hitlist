@@ -1,0 +1,30 @@
+.website-navigation {
+    display: flex;
+    grid-column: var(--full-grid);
+
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: var(--xx-large-size);
+    margin-left: var(--xx-large-size);
+    height: 10vh;
+
+    font-family: var(--secondary-font-averia-serif);
+}
+
+.website-navigation a {
+    color: var(--secondary-color-white);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.website-navigation a:hover{
+    border-bottom: 3px solid var(--accent-color-red);
+}
+.home {
+    margin-right: auto;
+}
+
+.login {
+    margin-right: var(--medium-size);
+}

@@ -5,13 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Hitlist</title>
-    <link rel="stylesheet" href=" {% static 'hitlist/styles/styles.css'%} " />
+    <link rel="stylesheet" href=" {% static 'hitlist/styles/universal-styles/main.css'%} " />
   </head>
   <body>
-    <nav>
-      <img src="#" alt="logo" />
-      <div>Log In</div>
-      <div>Sign Up</div>
+    <nav class="website-navigation">
+      <a href="#" class="nav-links home">
+        <img src="#" alt="logo" />
+      </a>
+      <a href="#" class="nav-links login">
+        Log In
+      </a>  
+      <a href="" class="nav-links signup">
+        <div class="signup">Sign Up</div>
+      </a>
     </nav>
 
     {% block content %} 

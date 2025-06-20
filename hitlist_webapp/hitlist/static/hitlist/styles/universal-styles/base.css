@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+    /* colors */
+    --primary-color-black: #080808;
+    --secondary-color-white: #ffffff;
+    --accent-color-red: #C90F0F; 
+
+    /* sizes */
+    --small-size: 1rem;
+    --medium-size: 1.5rem;
+    --large-size: 2rem;
+    --x-large-size: 4rem;
+    --xx-large-size: 8rem;
+    --xxx-large-size: 16rem;
+
+    /* viewport sizes */
+    --fullscreen: 100vh;
+    --half-screen: 50vh; 
+    --quarter-screen: 25vh;
+
+    /* fonts */
+    --primary-font-inter: "Inter", Arial, sans-serif;
+    --secondary-font-averia-serif: "Averia Serif Libre", "Times New Roman", serif;
+
+    /* grid widths */
+    --full-grid: 1 / -1;
+    --margin-grid: 2 / 12;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin:0;
+}
+body {
+    background-color: var(--primary-color-black);
+    color: var(--secondary-color-white);
+    font-family: var(--primary-font-inter);
+
+    display: grid;
+    grid-template-columns: var(--xx-large-size) repeat(10, 1fr) var(--xx-large-size);
+    height: var(--fullscreen);
+}
