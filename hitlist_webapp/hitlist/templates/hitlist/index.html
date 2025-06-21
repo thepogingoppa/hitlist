@@ -1,8 +1,11 @@
 {% extends "hitlist/base.html" %}
+{% load static %}
 
 {% block content%}
+    <link rel="stylesheet" href="{% static './hitlist/styles/index-styles/index.css' %}">
     <main class="hero-section">
-        <h1>Not all villains wear capes. 
+        <h1>
+            <span class="underlined">Not all villains</span> wear capes. 
             Some cut you off in traffic
         </h1>
         <p>
@@ -15,7 +18,7 @@
             Start Your List
         </button>
     </main>
-    <section>
+    <section class="features-section">
         <h1>Features You'll Defiinitely Want to Abuse</h1>
         <div>
             <div>Log Like a Pro</div>
@@ -23,7 +26,7 @@
             <div>Track Forgiveness</div>
         </div>
     </section>
-    <section>
+    <section class="statistics-section">
         <h1>Over 3.5 million grievances logged on the app. 
             Unlimited grudges. Because closure is overrated.
         </h1>

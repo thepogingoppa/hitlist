@@ -1,0 +1,33 @@
+.hero-section {
+    grid-column: var(--margin-grid);
+    height: var(--almost-fullscreen);
+    padding-top: var(--small-size);
+}
+
+.hero-section h1 {
+    font-size: var(--x-large-size);
+    font-family: var(--secondary-font-averia-serif);
+    font-weight: none;
+    width: var(--fullscreen);
+    line-height: var(--x-large-size);
+}
+
+.hero-section p {
+    width: var(--fullscreen);
+    line-height: var(--x-large-size);
+    padding-top: var(--medium-size);
+    padding-bottom: var(--medium-size); 
+}
+
+.hero-section button {
+    font-family: var(--secondary-font-averia-serif);
+    font-size: var(--large-size);
+    background-color: var(--accent-color-red);
+    color: var(--secondary-color-white);
+    padding-right: var(--x-large-size);
+    padding-left: var(--x-large-size);
+    padding-top: var(--large-size);
+    padding-bottom: var(--large-size);
+    border-radius: 5px;
+
+}

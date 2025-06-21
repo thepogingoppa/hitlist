@@ -15,6 +15,8 @@
 
     /* viewport sizes */
     --fullscreen: 100vh;
+    --almost-fullscreen: 90vh;
+    --quarter-fullscreen: 75vh;
     --half-screen: 50vh; 
     --quarter-screen: 25vh;
 
@@ -40,4 +42,8 @@ body {
     display: grid;
     grid-template-columns: var(--xx-large-size) repeat(10, 1fr) var(--xx-large-size);
     height: var(--fullscreen);
+}
+
+.underlined {
+    border-bottom: 4px solid var(--accent-color-red);
 }

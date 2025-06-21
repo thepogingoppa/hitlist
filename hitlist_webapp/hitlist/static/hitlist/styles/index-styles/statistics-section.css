@@ -1,0 +1,3 @@
+.statistics-section {
+    grid-column: var(--margin-grid);
+}
