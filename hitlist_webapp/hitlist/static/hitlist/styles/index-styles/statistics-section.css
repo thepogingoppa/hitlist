@@ -1,3 +1,13 @@
 .statistics-section {
     grid-column: var(--margin-grid);
+    display: flex;
+    height: var(--fullscreen);
+    flex-direction: column;
+    align-items: center;
+}
+
+.statistics-section h1 {
+    margin-bottom: var(--large-size);
+    margin-top: var(--x-large-size);
+    text-align: center;
 }

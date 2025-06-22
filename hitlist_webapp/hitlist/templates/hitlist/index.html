@@ -4,7 +4,7 @@
 {% block content%}
     <link rel="stylesheet" href="{% static './hitlist/styles/index-styles/index.css' %}">
     <main class="hero-section">
-        <h1>
+        <h1 class="section-title">
             <span class="underlined">Not all villains</span> wear capes. 
             Some cut you off in traffic
         </h1>
@@ -14,22 +14,30 @@
             from Accouting to Crystal the 7/11 Karen
         </p>
 
-        <button>
+        <button class="call-to-action-button">
             Start Your List
         </button>
     </main>
     <section class="features-section">
-        <h1>Features You'll Defiinitely Want to Abuse</h1>
-        <div>
-            <div>Log Like a Pro</div>
-            <div>Update Status</div>
-            <div>Track Forgiveness</div>
+        <h1 class="section-title">Features <span class="underlined">You'll Defiinitely</span> Want to Abuse</h1>
+        <div class="feature-container">
+            <div>
+                <img src="#" alt="logging icon">
+                Log Like a Pro
+            </div>
+            <div>
+                <img src="#" alt="update status icon">
+                Update Status
+            </div>
+            <div>
+                <img src="#" alt="track status icon">
+                Track Forgiveness</div>
         </div>
     </section>
     <section class="statistics-section">
-        <h1>Over 3.5 million grievances logged on the app. 
+        <h1 class="section-title">Over <span class="underlined">3.5 million</span> grievances logged on the app. 
             Unlimited grudges. Because closure is overrated.
         </h1>
-        <button>Start Your List</button>
+        <button class="call-to-action-button">Start Your List</button>
     </section>
 {%endblock content%}

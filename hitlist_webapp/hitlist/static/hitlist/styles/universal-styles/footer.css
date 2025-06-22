@@ -2,4 +2,5 @@ footer {
     padding-left: var(--xx-large-size);
     padding-right: var(--xx-large-size);
     grid-column: var(--full-grid);
+    height: 10vh;
 }
