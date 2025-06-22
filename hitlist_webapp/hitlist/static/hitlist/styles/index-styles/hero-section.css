@@ -1,0 +1,14 @@
+.hero-section {
+    grid-column: var(--margin-grid);
+    height: var(--fullscreen);
+    padding-top: var(--large-size);
+    padding-bottom: var(--large-size);
+}
+
+.hero-section p {
+    width: var(--fullscreen);
+    line-height: var(--x-large-size);
+    margin-top: var(--medium-size);
+    margin-bottom: var(--medium-size); 
+}
+

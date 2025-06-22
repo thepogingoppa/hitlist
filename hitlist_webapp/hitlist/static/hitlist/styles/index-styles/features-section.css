@@ -1,0 +1,23 @@
+.features-section {
+    grid-column: var(--margin-grid);
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--x-large-size);
+    margin-bottom: var(--x-large-size);
+}
+
+.feature-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: var(--half-screen);
+    height: var(--half-screen);
+    background-color: var(--accent-color-gray);
+    border-radius: var(--curved-corners);
+    font-family: var(--secondary-font-averia-serif);
+    font-size: var(--medium-size);
+}

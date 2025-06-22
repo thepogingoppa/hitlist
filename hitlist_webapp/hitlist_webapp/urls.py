@@ -16,24 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth import views as auth_views
-from users import views as user_views
-from django.conf import settings
-from django.conf.urls.static import static
-
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='hitlist-login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='hitlist-logout'),
-    path('register/', user_views.register, name='hitlist-register'),
-    path('home/', include('hitlist.urls')),
-    path('profile-page/', user_views.profile_view, name='hitlist-profile'),
-    path('', include('hitlist.urls')),
-    path("__reload__/", include("django_browser_reload.urls")),
+    path('admin/', admin.site.urls), 
+    path('', include('hitlist.urls'))
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-

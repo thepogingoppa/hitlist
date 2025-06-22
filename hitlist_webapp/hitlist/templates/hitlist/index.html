@@ -1,19 +1,43 @@
-{% extends 'hitlist/base.html' %}
+{% extends "hitlist/base.html" %}
+{% load static %}
 
-{% block content %}
-    <section class="h-[90vh] flex-row items-end">
-        <h1 class='text-8xl pb-5 text-white font-bold text-transform: uppercase'>
-            Welcome to the 
-            <span class="text-red-500">Hitlist</span>
+{% block content%}
+    <link rel="stylesheet" href="{% static './hitlist/styles/index-styles/index.css' %}">
+    <main class="hero-section">
+        <h1 class="section-title">
+            <span class="underlined">Not all villains</span> wear capes. 
+            Some cut you off in traffic
         </h1>
-        <p class="pb-5 w-[75%] text-lg/loose">
-            Tired of forgetting the names of people who really deserve a spot on your personal blacklist? Enter The Hitlist—a darkly an app for keeping tabs on the people who’ve wronged you, annoyed you, or just chewed too loudly at lunch. 
-            No actual harm encouraged—just the sweet satisfaction of organization and a little emotional catharsis. Log their names, the date of which you added them and their alive status. 
-            Maybe even forgive… eventually. It’s petty. It’s pettily perfect. It’s The Hitlist. Because revenge is a dish best served… documented.
+        <p>
+            Are you holding onto petty grudges like a true champion? Have no fear—The Hitlist is here! 
+            It is your ultimate tool for keeping tabs on every last person who wronged you, from Jeremy
+            from Accouting to Crystal the 7/11 Karen
         </p>
-        <div class="pt-[1.5rem]">
-            <a class="p-5 mr-[0.75rem] bg-red-500 rounded-lg" href={% url 'hitlist-login'%}>I have an Account</a>
-            <a class="p-5 ml-[0.75rem] bg-red-500 rounded-lg" href={% url 'hitlist-register' %}>I don't have an account</a>
+
+        <button class="call-to-action-button">
+            Start Your List
+        </button>
+    </main>
+    <section class="features-section">
+        <h1 class="section-title">Features <span class="underlined">You'll Defiinitely</span> Want to Abuse</h1>
+        <div class="feature-container">
+            <div>
+                <img src="#" alt="logging icon">
+                Log Like a Pro
+            </div>
+            <div>
+                <img src="#" alt="update status icon">
+                Update Status
+            </div>
+            <div>
+                <img src="#" alt="track status icon">
+                Track Forgiveness</div>
         </div>
     </section>
-{% endblock content %}
+    <section class="statistics-section">
+        <h1 class="section-title">Over <span class="underlined">3.5 million</span> grievances logged on the app. 
+            Unlimited grudges. Because closure is overrated.
+        </h1>
+        <button class="call-to-action-button">Start Your List</button>
+    </section>
+{%endblock content%}
