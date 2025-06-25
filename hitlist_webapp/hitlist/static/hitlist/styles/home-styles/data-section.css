@@ -1,0 +1,4 @@
+.data-section {
+    grid-column: var(--margin-grid);
+    height: var(--almost-fullscreen);
+}

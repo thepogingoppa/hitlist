@@ -1,0 +1,20 @@
+{% extends "hitlist/base.html" %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static './hitlist/styles/home-styles/home.css'%}">
+
+    <main class="data-section">
+        <h1>Welcome Back, [USER]</h1>
+
+        {% for people in peoples %}
+            <section>
+                <img src="#" alt="profile picture">
+                <span>{{ people.first_name }}</span>
+                <span>{{ people.last_name }}</span>
+                <div>{{ people.get_status_choices_display }}</div>
+            </section>
+        {% endfor %}
+
+    </main>
+{% endblock content%}
