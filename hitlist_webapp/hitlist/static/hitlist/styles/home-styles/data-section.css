@@ -1,4 +1,22 @@
-.data-section {
+main {
     grid-column: var(--margin-grid);
     height: var(--almost-fullscreen);
+}
+
+.data-section {
+    padding-top: var(--small-size);
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color-white);
+    color: var(--primary-color-black);
+    padding: var(--medium-size);
+    margin-bottom: var(--small-size);
+    border-radius: var(--curved-corners);
+}
+
+.right {
+    flex-direction: row;
 }

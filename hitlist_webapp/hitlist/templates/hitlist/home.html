@@ -4,17 +4,24 @@
 {% block content %}
     <link rel="stylesheet" href="{% static './hitlist/styles/home-styles/home.css'%}">
 
-    <main class="data-section">
+    <main>
         <h1>Welcome Back, [USER]</h1>
 
-        {% for people in peoples %}
-            <section>
-                <img src="#" alt="profile picture">
-                <span>{{ people.first_name }}</span>
-                <span>{{ people.last_name }}</span>
-                <div>{{ people.get_status_choices_display }}</div>
-            </section>
-        {% endfor %}
-
+        <section class="data-section">
+            {% for people in peoples %}
+            <div class="data">
+                <div class="left">
+                    <img src="#" alt="profile picture">
+                    <span>{{ people.first_name }}</span>
+                    <span>{{ people.last_name }}</span>
+                </div>
+                <div class="right">
+                    <span>{{ people.get_status_choices_display }}</span>
+                    <img src="#" alt="delete icon">
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        
     </main>
 {% endblock content%}
