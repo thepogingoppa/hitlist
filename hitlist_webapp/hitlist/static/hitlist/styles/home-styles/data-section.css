@@ -7,6 +7,42 @@ main {
     padding-top: var(--small-size);
 }
 
+.name {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status {
+    display: inline-block;
+    padding: var(--x-small-size);
+    width: 15vh;
+    text-align: center;;
+    text-transform: uppercase;
+    color: var(--secondary-color-white);
+    font-weight: bold;
+    border-radius: var(--circle-corners);
+    margin-right: var(--small-size);
+}
+
+.loathed {
+    background-color: var(--loathed-color);
+}
+.ignored {
+    background-color: var(--ignored-color);
+}
+.forgiven {
+    background-color: var(--forgiven-color);
+}
+
+.profile-pic {
+    padding-right: var(--small-size);
+}
+.left,
+.right{
+    display: flex;
+    align-items: center;
+}
+
 .data {
     display: flex;
     justify-content: space-between;
@@ -15,8 +51,4 @@ main {
     padding: var(--medium-size);
     margin-bottom: var(--small-size);
     border-radius: var(--curved-corners);
-}
-
-.right {
-    flex-direction: row;
 }

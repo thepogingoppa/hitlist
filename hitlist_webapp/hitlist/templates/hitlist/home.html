@@ -11,12 +11,17 @@
             {% for people in peoples %}
             <div class="data">
                 <div class="left">
-                    <img src="#" alt="profile picture">
-                    <span>{{ people.first_name }}</span>
-                    <span>{{ people.last_name }}</span>
+                    <img src="#" class="profile-pic" alt="profile picture">
+                    <span class="name">{{ people.first_name }} {{ people.last_name }}</span>
                 </div>
                 <div class="right">
-                    <span>{{ people.get_status_choices_display }}</span>
+                    {% if people.status_choices == 'L'%}
+                        <span class="status loathed">{{ people.get_status_choices_display }}</span>
+                    {% elif people.status_choices == 'I'%}
+                        <span class="status ignored">{{ people.get_status_choices_display }}</span>
+                    {% elif people.status_choices == 'F'%}
+                        <span class="status forgiven">{{ people.get_status_choices_display }}</span>
+                    {% endif %}
                     <img src="#" alt="delete icon">
                 </div>
             </div>

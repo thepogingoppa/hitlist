@@ -6,8 +6,14 @@
     --accent-color-red: #C90F0F; 
     --accent-color-gray: #1E1E1E;
 
+    /* status colors */
+    --loathed-color: #C90F0F;
+    --ignored-color: #C6BC00;
+    --forgiven-color: #1B7F00;
+
     /* sizes */
-    --small-size: 1rem;
+    --x-small-size: 0.5rem;
+    --small-size: 1rem; 
     --medium-size: 1.5rem;
     --large-size: 2rem;
     --x-large-size: 4rem;
@@ -31,6 +37,7 @@
 
     /* border-radius */
     --curved-corners: 5px;
+    --circle-corners: 100px;
 }
 
 * {
