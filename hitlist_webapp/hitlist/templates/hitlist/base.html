@@ -13,14 +13,21 @@
       <a href="{% url 'hitlist-landing' %}" class="nav-links home">
         <img src="#" alt="logo" />
       </a>
-      <a href="{% url 'hitlist-signup'%}" class="nav-links login">
+      <a href="{% url 'hitlist-login'%}" class="nav-links login">
         Log In
       </a>  
-      <a href="" class="nav-links signup">
+      <a href="{% url 'hitlist-signup' %}" class="nav-links signup">
         <div class="signup">Sign Up</div>
       </a>
     </nav>
 
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" >
+          {{ message}}
+        </div>
+      {% endfor %}
+    {% endif %}
     {% block content %} 
     {% endblock content %}
 

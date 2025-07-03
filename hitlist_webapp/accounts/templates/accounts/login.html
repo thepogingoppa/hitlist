@@ -1,0 +1,18 @@
+{% extends "hitlist/base.html"%}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <section class="login-section">
+        <div class="login-container">
+            <form action="POST">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class='title'>Log In</legend>
+                    {{ form | crispy }}
+                </fieldset>
+                <button class="form-button" type='submit'>Log In</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
