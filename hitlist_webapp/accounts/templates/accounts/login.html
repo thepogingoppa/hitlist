@@ -3,8 +3,9 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <section class="login-section">
-        <div class="login-container">
+    <link rel="stylesheet" href="{% static './accounts/styles/universal-styles/accounts.css'%}">
+    <section class="form-section">
+        <div class="form-container">
             <form action="POST">
                 {% csrf_token %}
                 <fieldset>

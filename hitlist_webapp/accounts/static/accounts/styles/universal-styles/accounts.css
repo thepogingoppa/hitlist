@@ -1,0 +1,25 @@
+.form-section {
+    grid-column: var(--margin-grid);
+    padding-bottom: var(--xx-large-size);
+
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: var(--secondary-font-averia-serif);
+    text-align: center;
+}
+
+.form-container {
+    width: var(--half-screen);
+}
+
+.form-button {
+    background-color: var(--accent-color-red);
+    color: var(--secondary-color-white);
+    border-radius: var(--curved-corners);
+    font-family: var(--secondary-font-averia-serif);
+    padding: var(--small-size);
+    width: 100%;
+}

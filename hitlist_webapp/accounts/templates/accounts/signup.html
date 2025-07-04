@@ -3,9 +3,9 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <link rel="stylesheet" href="{% static './accounts/styles/signup-styles/signup.css' %}">
-    <section class="signup-section">
-        <div class="signup-container">
+    <link rel="stylesheet" href="{% static './accounts/styles/universal-styles/accounts.css' %}">
+    <section class="form-section">
+        <div class="form-container">
             <form action="POST">
                 {% csrf_token %}
                 <fieldset>
