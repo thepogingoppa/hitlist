@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{% static './accounts/styles/universal-styles/accounts.css' %}">
     <section class="form-section">
         <div class="form-container">
-            <form action="POST">
+            <form method="POST">
                 {% csrf_token %}
                 <fieldset>
                     <legend class='title'>Sign Up</legend>
