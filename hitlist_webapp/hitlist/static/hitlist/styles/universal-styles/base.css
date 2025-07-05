@@ -78,3 +78,7 @@ body {
     padding-bottom: var(--large-size);
     border-radius: var(--curved-corners);
 }
+
+.alert {
+    grid-column: var(--margin-grid);
+}

@@ -5,21 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Hitlist</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href=" {% static './hitlist/styles/universal-styles/main.css'%} " />
   </head>
   <body>
     <nav class="website-navigation">
-      <a href="#" class="nav-links home">
+      <a href="{% url 'hitlist-landing' %}" class="nav-links home">
         <img src="#" alt="logo" />
       </a>
-      <a href="#" class="nav-links login">
+      <a href="{% url 'hitlist-login'%}" class="nav-links login">
         Log In
       </a>  
-      <a href="" class="nav-links signup">
+      <a href="{% url 'hitlist-signup' %}" class="nav-links signup">
         <div class="signup">Sign Up</div>
       </a>
     </nav>
 
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" >
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
     {% block content %} 
     {% endblock content %}
 
