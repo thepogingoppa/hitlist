@@ -13,12 +13,19 @@
       <a href="{% url 'hitlist-landing' %}" class="nav-links home">
         <img src="#" alt="logo" />
       </a>
-      <a href="{% url 'hitlist-login'%}" class="nav-links login">
-        Log In
-      </a>  
-      <a href="{% url 'hitlist-signup' %}" class="nav-links signup">
-        <div class="signup">Sign Up</div>
-      </a>
+      {% if user.is_authenticated %}
+        <form action="{% url 'hitlist-logout'%}" method='post'>
+          {% csrf_token %}
+          <button class='logout'>Log Out</button>
+        </form>
+      {% else %}
+        <a href="{% url 'hitlist-login'%}" class="nav-links login">
+          Log In
+        </a>  
+        <a href="{% url 'hitlist-signup' %}" class="nav-links signup">
+          <div class="signup">Sign Up</div>
+        </a>
+      {% endif %}
     </nav>
 
     {% if messages %}

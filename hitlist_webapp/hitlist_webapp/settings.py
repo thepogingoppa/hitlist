@@ -136,5 +136,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 # Log In Settings
 
-LOGIN_REDIRECT_URL = 'hitlist_home'
+LOGIN_REDIRECT_URL = 'hitlist-home'
 

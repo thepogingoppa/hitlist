@@ -14,7 +14,3 @@ def register(request):
         form = UserCreationForm()
     
     return render(request, "accounts/signup.html", {'form': form })
-
-# def register(request):
-#     form = UserCreationForm()
-#     return render(request, 'accounts/signup.html', {'form': form})
