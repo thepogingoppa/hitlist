@@ -3,6 +3,9 @@ main {
     height: var(--almost-fullscreen);
 }
 
+main h1 {
+    font-family: var(--secondary-font-averia-serif);
+}
 .data-section {
     padding-top: var(--small-size);
 }

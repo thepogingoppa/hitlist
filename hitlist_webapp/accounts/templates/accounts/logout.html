@@ -3,5 +3,16 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h1>Logged Out</h1>
+    <link rel="stylesheet" href="{% static './accounts/styles/logout-styles/logout.css'%}">
+    <main class="logout-section">
+        <span class="emoticon-image">ლ(́◉◞౪◟◉‵ლ)</span>
+        <h1 class="title">You Have Been <span class='underlined'>Logged Out</span></h1>
+        <p class='tagline'>You may be out, but your vendettas live on</p>
+        <a href="{% url 'hitlist-login'%}">
+            <button class='cta-button login-button'>Log In</button>
+        </a>
+        <a href="{% url 'hitlist-signup'%}">
+            <button class='cta-button'>Sign Up</button>
+        </a>
+    </main>
 {% endblock content %}
