@@ -3,14 +3,17 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <link rel="stylesheet" href="{% static './accounts/styles/universal-styles/accounts.css'%}">
-    <section class="form-section">
+    <link rel="stylesheet" href="{% static './accounts/styles/login-styles/login.css'%}">
+    <section class="form-section login-container">
         <div class="form-container">
             <form method="POST">
                 {% csrf_token %}
                 <fieldset>
                     <legend class='title'>Log In</legend>
                     {{ form | crispy }}
+                    <a class='links' href="{% url 'hitlist-signup'%}">
+                        Don't have an account?
+                    </a>
                 </fieldset>
                 <button class="form-button" type='submit'>Log In</button>
             </form>

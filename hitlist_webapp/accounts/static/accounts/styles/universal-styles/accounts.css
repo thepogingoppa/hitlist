@@ -23,3 +23,14 @@
     padding: var(--small-size);
     width: 100%;
 }
+
+.links {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.links:hover {
+    color: var(--secondary-color-white);
+    text-decoration: none;
+}

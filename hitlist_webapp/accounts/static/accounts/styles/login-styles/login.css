@@ -1,1 +1,2 @@
-@import url('login-section.css')
+@import url('../universal-styles/accounts.css');
+@import url('./login-section.css');

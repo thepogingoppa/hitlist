@@ -14,9 +14,11 @@
             from Accouting to Crystal the 7/11 Karen
         </p>
 
-        <button class="call-to-action-button">
-            Start Your List
-        </button>
+        <a href="{% url 'hitlist-login'%}">
+            <button class="call-to-action-button">
+                Start Your List
+            </button>
+        </a>
     </main>
     <section class="features-section">
         <h1 class="section-title">Features <span class="underlined">You'll Defiinitely</span> Want to Abuse</h1>
@@ -38,6 +40,8 @@
         <h1 class="section-title">Over <span class="underlined">3.5 million</span> grievances logged on the app. 
             Unlimited grudges. Because closure is overrated.
         </h1>
-        <button class="call-to-action-button">Start Your List</button>
+        <a href="{% url 'hitlist-login'%}">
+            <button class="call-to-action-button">Start Your List</button>
+        </a>
     </section>
 {%endblock content%}
