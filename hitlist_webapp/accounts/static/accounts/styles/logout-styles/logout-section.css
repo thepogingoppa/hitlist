@@ -1,0 +1,31 @@
+.logout-section {
+    grid-column: var(--margin-grid);
+    display: flex;
+    flex-direction: column;
+    height: var(--almost-fullscreen);
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.emoticon-image{
+    font-size:var(--x-large-size);
+    opacity: 0.25;
+    margin-top: var(--x-large-size);
+    margin-bottom: var(--large-size);
+}
+
+.cta-button {
+    font-family: var(--secondary-font-averia-serif);
+    width: var(--quarter-screen);
+    padding-right: var(--medium-size);
+    padding-top: var(--small-size);
+    padding-bottom: var(--small-size);
+    padding-left: var(--medium-size);
+    margin-bottom: var(--small-size);
+}
+
+.login-button {
+    background-color: var(--accent-color-red);
+    color: var(--secondary-color-white);
+    border-radius: var(--curved-corners);
+}
