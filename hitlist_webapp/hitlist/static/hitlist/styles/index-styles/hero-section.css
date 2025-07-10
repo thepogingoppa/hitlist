@@ -3,6 +3,7 @@
     height: var(--fullscreen);
     padding-top: var(--large-size);
     padding-bottom: var(--large-size);
+    background-image: url('../../images/background-images/hero-section-background.png');
 }
 
 .hero-section p {
