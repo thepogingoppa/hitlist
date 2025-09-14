@@ -1,10 +1,13 @@
 .hero-section {
-    grid-column: var(--margin-grid);
+    grid-column: var(--full-grid);
     height: var(--fullscreen);
+    padding-left: var(--xx-large-size);
+    padding-right: var(--xx-large-size);
     padding-top: var(--large-size);
     padding-bottom: var(--large-size);
+    background-image: url("../../images/background-images/hero-section-background.png");
+    background-size: cover;
 }
-
 .hero-section p {
     width: var(--fullscreen);
     line-height: var(--x-large-size);

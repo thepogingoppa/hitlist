@@ -3,22 +3,24 @@
 
 {% block content%}
     <link rel="stylesheet" href="{% static './hitlist/styles/index-styles/index.css' %}">
-    <main class="hero-section">
-        <h1 class="section-title">
-            <span class="underlined">Not all villains</span> wear capes. 
-            Some cut you off in traffic
-        </h1>
-        <p>
-            Are you holding onto petty grudges like a true champion? Have no fear—The Hitlist is here! 
-            It is your ultimate tool for keeping tabs on every last person who wronged you, from Jeremy
-            from Accouting to Crystal the 7/11 Karen
-        </p>
-
-        <a href="{% url 'hitlist-login'%}">
-            <button class="call-to-action-button">
-                Start Your List
-            </button>
-        </a>
+    <main class='hero-section'>
+        <div class='hero-section-container'>
+            <h1 class="section-title">
+                <span class="underlined">Not all villains</span> wear capes. 
+                Some cut you off in traffic
+            </h1>
+            <p>
+                Are you holding onto petty grudges like a true champion? Have no fear—The Hitlist is here! 
+                It is your ultimate tool for keeping tabs on every last person who wronged you, from Jeremy
+                from Accouting to Crystal the 7/11 Karen
+            </p>
+    
+            <a href="{% url 'hitlist-login'%}">
+                <button class="call-to-action-button">
+                    Start Your List
+                </button>
+            </a>
+        </div>
     </main>
     <section class="features-section">
         <h1 class="section-title">Features <span class="underlined">You'll Defiinitely</span> Want to Abuse</h1>
